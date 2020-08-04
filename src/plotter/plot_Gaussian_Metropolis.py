@@ -31,7 +31,7 @@ ax.plot(x,p)
 
 ns = np.arange(N) + 1
 mn = np.cumsum (data[:,0]) / ns
-sg = np.cumsum (data[:,0]**2) / ns
+sg = np.cumsum (data[:,0]**2) / ns - mn**2
 
 ax = fig.add_subplot (2,1,2)
 ax.plot (ns, mn, '-')
