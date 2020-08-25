@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	niter int     = 10000
+	niter int     = 1000000
 	ntau  int     = 20
 	dtau  float64 = 0.5
 	ndim  int     = 3
