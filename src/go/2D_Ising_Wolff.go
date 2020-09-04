@@ -10,12 +10,12 @@ import (
 )
 
 const (
-	niter = 10000
+	niter = 1000000
 	nx int = 64			// number of sites along x-direction
 	ny int = 64			// number of sites along y-direction
 	coupling_J float64 = 1.0
-	coupling_h float64 = 0.1
-	temperature float64 = 5.0
+	coupling_h float64 = 0.0
+	temperature float64 = 2.0
 	nskip = 100		// Frequency of measurement
 	nconfig = 10000	// Frequency of saving config; 0->don't save
 )
@@ -80,6 +80,8 @@ func makeCluster (
 
 	k := 0
 	for k < nCluster {
+		ix = iCluster[k][0]
+		iy = iCluster[k][1]
 		for _, v := range dict {
 			ix2 := (ix+v[0])%nx
 			iy2 := (iy+v[1])%ny
